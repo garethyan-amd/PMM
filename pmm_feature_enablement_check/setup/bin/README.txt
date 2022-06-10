@@ -1,0 +1,1 @@
+1. Please get latest papi2 from this location:	\\papanassrdc\public\PAPI2

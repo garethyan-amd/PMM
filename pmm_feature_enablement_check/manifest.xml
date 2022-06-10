@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Workload>
+	
+	<!-- Owner of the Workload -->
+	<OwnerEmail>buyuan@amd.com</OwnerEmail>
+
+	<!-- Workload Wrapper Version -->
+	<Version>1.0</Version>
+	
+	<!-- List of sites where this workload can not be exported -->
+	<RestrictedSites>		
+	</RestrictedSites>
+	
+	<!-- Allowed Distribution Audience Internal, NDA, Public (Public would imply NDA and Internal, etc.) -->
+	<Distribution>Internal</Distribution>
+
+	<!-- Nonintrusive checks that must be met in order to run the workload -->
+	<Constraints>		
+	</Constraints>
+
+	<!-- Setup script, will get passed the setup parameters -->
+	<Setup timeout="300">setup/setup.bat</Setup>
+
+	
+	<!-- Workload Info to optionally display to the User -->
+	<WorkloadInfo type="html">
+		<div>
+			<pre>
+				PMM Feature Enablement Check
+						<a href="mailto:buyuan@amd.com">Email : buyuan</a>
+						18/10/2021
+			</pre>
+		</div>
+	</WorkloadInfo>
+
+	<!-- Single run command (probably a wrapper script), will get passed the full set of parameter name/values; Note:  overall timeout = workload run time + timeout_offset. Workload run time 
+	to be specified in the framework. -->
+	<Run timeout_offset="300">run/PMMFeatureEnablementCheck.py</Run>
+	
+	<RunParameters>
+		<!-- HTML parameter form definition goes here -->
+		<form id="UnigenSuperPosition" action="" onsubmit="javascript: showOptions(this); return false;">
+				<div>
+					<fieldset>
+						<legend>settings:</legend>
+						<div>
+							<label for="runs">runs:</label>
+							<input id="runs" type="text" name="-i" value=""></input>
+							<br></br>
+							<label for="resultsDirectory">resultsDirectory:</label>
+							<input id="resultsDirectory" type="text" name="--resultsDirectory" value="results"  />
+							<br></br>
+						<div>
+						<label for="subtest">Test Case:</label>
+						<select id="subtest" name="--section">
+							<option value="ALL" selected="ALL">Official</option>
+						</select>
+						</div>			
+						</div>									
+					</fieldset>
+				</div>
+			</form>
+	</RunParameters>	
+	
+	
+	<!-- Predefined presets of common parameter combinations; first item in the list will be the default -->
+	<Presets>
+		<Preset name="Official Run" value="all">
+			<run></run>
+		</Preset>	
+	</Presets>	
+
+	<!-- Compatibile OS listed as key/value pairs; used to filter workloads in the UI; framework can also inforce this check -->
+	<OsCompatibility>
+		<OS>Windows</OS>
+	</OsCompatibility>
+	
+	<!-- Specify if this workload can be run concurrently with other workloads. Allowed values => True or False -->
+	<ConcurrentExecution>False</ConcurrentExecution>
+
+	<!-- Other information the controlling automation framework might need about the test, arranged in key/value pairs; Qualifiers are PPO;VAL;MARGSI;ALL -->
+	<FrameworkDirectives>		
+	</FrameworkDirectives>
+
+</Workload>
