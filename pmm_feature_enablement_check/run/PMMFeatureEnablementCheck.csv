@@ -12,7 +12,6 @@ YES,32,Chagall,PPTable_CCX_VdciAsync,VDCI,mp1fw,0,1,Predictive Mode,Async Mode
 YES,32,Chagall,SOC_DC_BTC_Done,SOC_DC_BTC,mp1fw,1,0,ENABLED,DISABLED
 YES,32,Chagall,Cclk_FddBtcVRef,FDD_BTC,mp1fw,0,1,DISABLED,ENABLED
 YES,64,Raphael,PPTable_CCX_VdciAsync,VDCI,mp1fw,0,1,Predictive Mode,Async Mode
-YES,64,Raphael,Cclk_FddBtcVRef,FDD_BTC,mp1fw,0,1,DISABLED,ENABLED
 YES,64,Raphael,Cclk_L3_0_FllBtcCompleted,L3_FLL_BTC,mp5fw,1,0,ENABLED,DISABLED
 NO,64,Mendocino,DC_BTC_DONE,DC_BTC,mp1fw,1,0,ENABLED,DISABLED
 NO,64,Mendocino,CCLK_CPBCAPDIS,CPB,mp1fw,0,1,ENABLED,DISABLED
